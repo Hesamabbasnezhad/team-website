@@ -697,7 +697,7 @@ const MEMBERS = [
     id: "mohsen",
     name: "محسن مفرح",
     initials: "م.م",
-    photo: null,
+    photo: "image/mohsen.jpg",
     role: "توسعه‌دهنده بک‌اند (Laravel)",
     bio: "علاقه‌مند به بهینه‌سازی دیتابیس و ساخت APIهای مقیاس‌پذیر.",
     skills: ["Laravel", "PHP", "MySQL", "Redis", "Docker", "LiveWire", "Go"],
