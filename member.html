@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="پروفایل کامل عضو تیم کوشان" />
+  <title>پروفایل عضو | تیم کوشان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="detail.css" />
+</head>
+<body class="detail-page">
+
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-glow" id="bgGlow" aria-hidden="true"></div>
+
+  <!-- ═══ ناوبری ═══ -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="nav-brand" aria-label="تیم کوشان — خانه">
+        <div class="logo-placeholder">
+          <img src="image/logo.png" alt="" class="logo">
+        </div>
+        <span class="nav-brand-name">تیم کوشان</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="منوی اصلی">
+        <a href="index.html" class="nav-link">بازگشت به خانه</a>
+        <a href="index.html#team" class="nav-link">اعضای تیم</a>
+        <a href="index.html#contact" class="nav-link">تماس</a>
+      </nav>
+      <a href="index.html#contact" class="btn btn-sm btn-primary nav-cta">شروع همکاری</a>
+      <button class="hamburger" id="hamburger" aria-label="باز و بسته کردن منو" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="detail-main">
+    <!-- محتوای داینامیک توسط detail.js از data.js پر میشود -->
+    <div class="container">
+      <nav class="breadcrumb reveal" aria-label="مسیر صفحه">
+        <a href="index.html">خانه</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="index.html#team">تیم</a>
+        <span class="breadcrumb-sep">/</span>
+        <span id="breadcrumbTitle">عضو</span>
+      </nav>
+
+      <!-- سربرگ پروفایل -->
+      <div class="detail-hero member-hero reveal">
+        <div class="detail-hero-info">
+          <span class="portfolio-tag" id="memberRoleTag"></span>
+          <h1 class="detail-title" id="memberName"></h1>
+          <p class="detail-subtitle" id="memberRole"></p>
+          <div class="member-socials" id="memberSocials">
+            <!-- لینکهای اجتماعی از data.js تزریق میشوند -->
+          </div>
+        </div>
+        <div class="member-hero-avatar" id="memberAvatarWrap">
+          <!-- آواتار از data.js تزریق میشود -->
+        </div>
+      </div>
+
+      <!-- معرفی کامل -->
+      <section class="detail-section reveal">
+        <h2 class="detail-section-title">معرفی کامل</h2>
+        <div class="detail-longdesc" id="memberLongBio"></div>
+      </section>
+
+      <div class="detail-columns">
+        <!-- مهارتها با درصد -->
+        <section class="detail-section reveal">
+          <h2 class="detail-section-title">مهارت های تخصصی</h2>
+          <div class="detail-langs" id="memberSkills"></div>
+        </section>
+
+        <!-- سوابق کاری -->
+        <section class="detail-section reveal">
+          <h2 class="detail-section-title">سوابق کاری</h2>
+          <ul class="member-experiences" id="memberExperiences"></ul>
+        </section>
+      </div>
+
+      <!-- پروژههای مرتبط با عضو -->
+      <section class="detail-section reveal">
+        <h2 class="detail-section-title">پروژه های این عضو</h2>
+        <div class="detail-projects-row" id="memberProjectsRow"></div>
+      </section>
+
+      <!-- اعضای دیگر -->
+      <section class="detail-section reveal">
+        <h2 class="detail-section-title">سایر اعضای تیم</h2>
+        <div class="detail-team-row" id="otherMembersRow"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ═══ فوتر ═══ -->
+  <footer class="footer">
+    <div class="footer-divider" aria-hidden="true"></div>
+    <div class="container footer-bottom" style="border-top: none;">
+      <p>© ۱۴۰۴ تیم کوشان — تمامی حقوق محفوظ است.</p>
+      <p>طراحی و توسعه توسط تیم کوشان</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="detail.js"></script>
+</body>
+</html>

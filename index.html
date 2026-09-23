@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="تیم کوشان — طراحی و توسعه وب با لاراول و فرانتاند مدرن" />
+  <title>تیم کوشان | طراحی و توسعه وب</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-glow" id="bgGlow" aria-hidden="true"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#home" class="nav-brand" aria-label="تیم کوشان — خانه">
+        <div class="logo-placeholder">
+          <img src="image/logo.png" alt="" class="logo">
+        </div>
+        <span class="nav-brand-name">تیم کوشان</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="منوی اصلی">
+        <a href="#home" class="nav-link active" data-section="home">خانه</a>
+        <a href="#about" class="nav-link" data-section="about">درباره</a>
+        <a href="#team" class="nav-link" data-section="team">تیم</a>
+        <a href="#skills" class="nav-link" data-section="skills">مهارت ها</a>
+        <a href="#portfolio" class="nav-link" data-section="portfolio">نمونه کار ها</a>
+        <a href="#contact" class="nav-link" data-section="contact">تماس</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-sm btn-primary nav-cta">شروع همکاری</a>
+
+      <button class="hamburger" id="hamburger" aria-label="باز و بسته کردن منو" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══ 1) بخش خانه (Hero) ═══ -->
+    <section id="home" class="hero section">
+      <canvas id="particles" class="hero-particles" aria-hidden="true"></canvas>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title gradient-text-anim">تیم کوشان</h1>
+          <h2 class="hero-subtitle">
+            <span id="typedText" aria-label="طراحی وب سایت و سامانه اختصاصی و مدرن"></span><span class="type-cursor">|</span>
+          </h2>
+          <p class="hero-desc reveal">
+            تیمی از توسعه دهندگان خلاق که ایده های شما را با تکنولوژی های روز دنیا
+            به محصولات دیجیتال سریع، زیبا و پایدار تبدیل میکند.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#portfolio" class="btn btn-primary">مشاهده نمونه کار ها</a>
+            <a href="#team" class="btn btn-outline">آشنایی با تیم</a>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="اسکرول به پایین">
+        <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+      </a>
+    </section>
+
+    <!-- ═══ 2) بخش درباره ═══ -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">درباره ما</span>
+          <h2 class="section-title">ما کی هستیم و چه میکنیم</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+             تیم کوشان از سال ۱۴۰۰ با هدف ساخت محصولات وب با کیفیت شکل گرفت.
+              ما باور داریم نرم افزار خوب حاصل ترکیب مهندسی دقیق و طراحی انسانی است؛
+              به همین دلیل از همان روز اول کنار هر پروژه به تجربه کاربر، سرعت و امنیت به یک اندازه اهمیت داده ایم.
+            </p>
+            <p>
+               رویکرد ما ساده است: شفافیت در برآورد، تحویل مرحله ای و ارتباط مستمر.
+              در هر پروژه ابتدا نیازمندی ها را دقیق میفهمیم، معماری درستی می چینیم و سپس با
+              کدهای تمیز و تست شده پیش میرویم تا محصول نهایی هم امروز و هم سال ها بعد قابل اعتماد بماند.
+            </p>
+            <ul class="about-values">
+              <li>کیفیت بی چون و چرا</li>
+              <li>تحویل به موقع</li>
+              <li>ارتباط شفاف</li>
+              <li>یادگیری مداوم</li>
+            </ul>
+          </div>
+          <!-- ستون آمار با شمارنده -->
+          <div class="stats-grid">
+            <div class="stat-card reveal">
+              <span class="stat-number" data-count="10" data-prefix="+">۰</span>
+              <span class="stat-label">پروژه موفق</span>
+            </div>
+            <div class="stat-card reveal">
+              <span class="stat-number" data-count="5" data-prefix="+">۰</span>
+              <span class="stat-label">سال تجربه</span>
+            </div>
+            <div class="stat-card reveal">
+              <span class="stat-number" data-count="5">۰</span>
+              <span class="stat-label">متخصص</span>
+            </div>
+            <div class="stat-card reveal">
+              <span class="stat-number" data-count="98" data-suffix="٪">۰</span>
+              <span class="stat-label">رضایت مشتری</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 3) بخش تیم ═══ -->
+    <section id="team" class="section team">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">تیم ما</span>
+          <h2 class="section-title">اعضای تیم کوشان</h2>
+        </div>
+        <div class="team-grid" id="teamGrid"></div>
+      </div>
+    </section>
+
+    <!-- ═══ 4) بخش مهارتها ═══ -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">توانایی ها</span>
+          <h2 class="section-title">مهارت ها و تکنولوژی ها</h2>
+        </div>
+        <div class="skills-grid">
+          <!-- ستون بکاند -->
+          <div class="skill-column reveal" data-skill-group="backend">
+            <h3 class="skill-column-title">
+              <span class="skill-column-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span>
+              بک اند (Laravel)
+            </h3>
+            <!-- هر مهارت: data-percent درصد نهایی نوار -->
+            <div class="skill-item">
+              <span class="skill-name">PHP</span><span class="skill-percent">۹۵٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Laravel</span><span class="skill-percent">۹۰٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">MySQL</span><span class="skill-percent">۸۵٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Redis</span><span class="skill-percent">۷۵٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">REST API</span><span class="skill-percent">۹۰٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Git</span><span class="skill-percent">۸۵٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Docker</span><span class="skill-percent">۷۰٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="70"></div></div>
+            </div>
+          </div>
+          <!-- ستون فرانتاند -->
+          <div class="skill-column reveal" data-skill-group="frontend">
+            <h3 class="skill-column-title">
+              <span class="skill-column-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></span>
+              فرانت اند
+            </h3>
+            <div class="skill-item">
+              <span class="skill-name">HTML5</span><span class="skill-percent">۹۵٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">CSS3</span><span class="skill-percent">۹۰٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span><span class="skill-percent">۸۸٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">React</span><span class="skill-percent">۸۰٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Tailwind</span><span class="skill-percent">۸۵٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Figma</span><span class="skill-percent">۷۸٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Git</span><span class="skill-percent">۸۵٪</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-percent="85"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 5) بخش نمونهکارها ═══ -->
+    <section id="portfolio" class="section portfolio">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">کارنامه</span>
+          <h2 class="section-title">نمونه کار های تیم</h2>
+        </div>
+        <!-- فیلترها -->
+    <div class="portfolio-filters reveal" role="tablist" aria-label="فیلتر نمونه کار ها">
+  <button class="filter-btn active" data-filter="all">همه</button>
+  <button class="filter-btn" data-filter="services">خدماتی</button>
+  <button class="filter-btn" data-filter="organizational">سازمانی</button>
+  <button class="filter-btn" data-filter="educational">آموزشی</button>
+  <button class="filter-btn" data-filter="ecommerce">فروشگاهی</button>
+  <button class="filter-btn" data-filter="bot">ربات</button>
+</div>
+        <!-- گرید پروژهها از data.js توسط script.js رندر میشود؛ data-category برای فیلتر -->
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+      </div>
+    </section>
+
+    <!-- ═══ 6) بخش تماس ═══ -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">ارتباط</span>
+          <h2 class="section-title">با ما در تماس باشید</h2>
+        </div>
+        <div class="contact-grid">
+          <!-- ستون اطلاعات تماس -->
+          <div class="contact-cards">
+            <div class="contact-card reveal">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+              <div>
+                <span class="contact-label">ایمیل تیم</span>
+                <a href="mailto:info@koushan-team.ir" class="contact-value">hessam.abbasnezhad@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-card reveal">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <div>
+                <span class="contact-label">شماره تماس</span>
+                <a href="tel:+989120000000" class="contact-value" dir="ltr">09147464120</a>
+              </div>
+            </div>
+            <div class="contact-card reveal">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div>
+                <span class="contact-label">آدرس</span>
+                <span class="contact-value">اردبیل ، اردبیل</span>
+              </div>
+            </div>
+          </div>
+          <!-- ستون شبکههای اجتماعی -->
+          <div class="contact-socials reveal">
+            <h3 class="contact-socials-title">ما را دنبال کنید</h3>
+            <div class="social-grid">
+              <a href="#" class="social-big" data-social="github">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.38 2.89-.39.98.01 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.66.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg><span class="tooltip">گیتهاب</span>
+              </a>
+              <a href="#" class="social-big" data-social="linkedin">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg><span class="tooltip">لینکدین</span>
+              </a>
+              <a href="#" class="social-big" data-social="instagram">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38A6.26 6.26 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a6.26 6.26 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a6.26 6.26 0 0 0 2.13-1.38 6.26 6.26 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a6.26 6.26 0 0 0-1.38-2.13A6.26 6.26 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 1 5.84 12 6.16 6.16 0 0 1 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 3.99zm6.4-11.85a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg><span class="tooltip">اینستاگرام</span>
+              </a>
+              <a href="#" class="social-big" data-social="telegram">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M11.94 0A12 12 0 1 0 24 12 12 12 0 0 0 11.94 0zm5.89 8.16-1.97 9.3c-.15.66-.54.82-1.09.51l-3-2.21-1.45 1.4c-.16.16-.3.3-.6.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12l-6.87 4.33-2.96-.93c-.64-.2-.66-.64.14-.95l11.57-4.46c.54-.2 1.01.12.83.9z"/></svg><span class="tooltip">تلگرام</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- CTA بزرگ -->
+        <div class="big-cta reveal">
+          <h3 class="big-cta-title">آمادهایم ایده شما را به واقعیت تبدیل کنیم</h3>
+          <a href="mailto:info@koushan-team.ir" class="btn btn-primary btn-lg">شروع گفتگو</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ فوتر ═══ -->
+  <footer class="footer">
+    <div class="footer-divider" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo-placeholder">
+           <div class="logo-placeholder">
+          <img src="image/logo.png" alt="" class="logo">
+        </div>
+        </div>
+        <p>تیم کوشان — ساخت محصولات وب سریع، زیبا و پایدار.</p>
+      </div>
+      <nav class="footer-links" aria-label="لینکهای سریع">
+        <a href="#home">خانه</a>
+        <a href="#about">درباره</a>
+        <a href="#team">تیم</a>
+        <a href="#skills">مهارت ها</a>
+        <a href="#portfolio">نمونه کار ها</a>
+        <a href="#contact">تماس</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="#" class="social-icon" data-social="github" aria-label="گیت هاب"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.38 2.89-.39.98.01 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.66.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a>
+        <a href="#" class="social-icon" data-social="linkedin" aria-label="لینکدین"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="#" class="social-icon" data-social="instagram" aria-label="اینستاگرام"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38A6.26 6.26 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a6.26 6.26 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a6.26 6.26 0 0 0 2.13-1.38 6.26 6.26 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a6.26 6.26 0 0 0-1.38-2.13A6.26 6.26 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 1 5.84 12 6.16 6.16 0 0 1 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 3.99zm6.4-11.85a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg></a>
+        <a href="#" class="social-icon" data-social="telegram" aria-label="تلگرام"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M11.94 0A12 12 0 1 0 24 12 12 12 0 0 0 11.94 0zm5.89 8.16-1.97 9.3c-.15.66-.54.82-1.09.51l-3-2.21-1.45 1.4c-.16.16-.3.3-.6.3l.21-3.05 5.56-5.02c.24-.21-.05-.33-.37-.12l-6.87 4.33-2.96-.93c-.64-.2-.66-.64.14-.95l11.57-4.46c.54-.2 1.01.12.83.9z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© ۱۴۰۴ تیم کوشان — تمامی حقوق محفوظ است.</p>
+      <p>طراحی و توسعه توسط تیم کوشان</p>
+    </div>
+  </footer>
+
+  <!-- ═══ مودال لایتباکس نمونهکار ═══ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-card">
+      <button class="lightbox-close" data-lightbox-close aria-label="بستن"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      <div class="lightbox-thumb" id="lightboxThumb"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div>
+      <div class="lightbox-body">
+        <span class="portfolio-tag" id="lightboxTag"></span>
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+        <a href="#" class="btn btn-primary btn-sm" id="lightboxLink" target="_blank" rel="noopener">مشاهده پروژه</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

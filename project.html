@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="جزئیات کامل پروژه — تیم کوشان" />
+  <title>جزئیات پروژه | تیم کوشان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="detail.css" />
+</head>
+<body class="detail-page">
+
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-glow" id="bgGlow" aria-hidden="true"></div>
+
+  <!-- ═══ ناوبری ═══ -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="nav-brand" aria-label="تیم کوشان — خانه">
+        <div class="logo-placeholder">
+          <img src="image/logo.png" alt="" class="logo">
+        </div>
+        <span class="nav-brand-name">تیم کوشان</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="منوی اصلی">
+        <a href="index.html" class="nav-link">بازگشت به خانه</a>
+        <a href="index.html#portfolio" class="nav-link">نمونه کار ها</a>
+        <a href="index.html#contact" class="nav-link">تماس</a>
+      </nav>
+      <a href="index.html#contact" class="btn btn-sm btn-primary nav-cta">شروع همکاری</a>
+      <button class="hamburger" id="hamburger" aria-label="باز و بسته کردن منو" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="detail-main">
+    <!-- محتوای داینامیک توسط detail.js از data.js پر میشود -->
+    <div class="container">
+      <nav class="breadcrumb reveal" aria-label="مسیر صفحه">
+        <a href="index.html">خانه</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="index.html#portfolio">نمونه کار ها</a>
+        <span class="breadcrumb-sep">/</span>
+        <span id="breadcrumbTitle">پروژه</span>
+      </nav>
+
+      <!-- سربرگ پروژه -->
+      <div class="detail-hero reveal">
+        <div class="detail-hero-info">
+          <span class="portfolio-tag" id="detailTag"></span>
+          <h1 class="detail-title" id="detailTitle"></h1>
+          <p class="detail-subtitle" id="detailDesc"></p>
+          <div class="detail-meta">
+            <div class="detail-meta-item">
+              <span class="detail-meta-label">سال انجام</span>
+              <span class="detail-meta-value" id="metaYear"></span>
+            </div>
+            <div class="detail-meta-item">
+              <span class="detail-meta-label">کارفرما</span>
+              <span class="detail-meta-value" id="metaClient"></span>
+            </div>
+            <div class="detail-meta-item">
+              <span class="detail-meta-label">مدت اجرا</span>
+              <span class="detail-meta-value" id="metaDuration"></span>
+            </div>
+          </div>
+          <div class="detail-actions">
+            <a href="#" class="btn btn-primary" id="detailLiveLink" target="_blank" rel="noopener">مشاهده نسخه زنده</a>
+            <a href="index.html#contact" class="btn btn-outline">پروژه مشابه میخواهم</a>
+          </div>
+        </div>
+        <div class="detail-hero-thumb" id="detailHeroThumb"></div>
+      </div>
+
+      <!-- گالری عکسهای رزومه -->
+      <section class="detail-section reveal">
+        <h2 class="detail-section-title">تصاویر پروژه</h2>
+        <div class="detail-gallery" id="detailGallery">
+          <!-- عکسها از data.js تزریق میشوند -->
+        </div>
+      </section>
+
+      <!-- توضیحات کامل -->
+      <section class="detail-section reveal">
+        <h2 class="detail-section-title">توضیحات کامل</h2>
+        <div class="detail-longdesc" id="detailLongDesc"></div>
+      </section>
+
+      <div class="detail-columns">
+        <!-- قابلیتها -->
+        <section class="detail-section reveal">
+          <h2 class="detail-section-title">قابلیت های اصلی</h2>
+          <ul class="detail-features" id="detailFeatures"></ul>
+        </section>
+
+        <!-- زبانها و تکنولوژیها -->
+        <section class="detail-section reveal">
+          <h2 class="detail-section-title">زبان ها و تکنولوژی ها</h2>
+          <div class="detail-langs" id="detailLangs"></div>
+        </section>
+      </div>
+
+      <!-- اعضای درگیر پروژه -->
+      <section class="detail-section reveal">
+        <h2 class="detail-section-title">اعضای درگیر در پروژه</h2>
+        <div class="detail-team-row" id="detailTeamRow"></div>
+      </section>
+
+      <!-- پروژههای مرتبط -->
+      <section class="detail-section reveal">
+        <h2 class="detail-section-title">پروژه های دیگر</h2>
+        <div class="detail-projects-row" id="detailProjectsRow"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ═══ فوتر ═══ -->
+  <footer class="footer">
+    <div class="footer-divider" aria-hidden="true"></div>
+    <div class="container footer-bottom" style="border-top: none;">
+      <p>© ۱۴۰۴ تیم کوشان — تمامی حقوق محفوظ است.</p>
+      <p>طراحی و توسعه توسط تیم کوشان</p>
+    </div>
+  </footer>
+
+  <!-- لایتباکس گالری -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-card">
+      <button class="lightbox-close" data-lightbox-close aria-label="بستن">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="lightbox-thumb" id="lightboxThumb"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="detail.js"></script>
+</body>
+</html>

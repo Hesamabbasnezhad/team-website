@@ -1,0 +1,455 @@
+/* ═══════════════════════════════════════════════════════
+   تیم کوشان — استایل صفحات جزئیات (project.html / member.html)
+   از متغیرهای style.css استفاده میکند
+   ═══════════════════════════════════════════════════════ */
+
+/* ─── چیدمان اصلی صفحه جزئیات ─── */
+.detail-page main { min-height: 60vh; }
+
+.detail-main {
+  padding-top: calc(var(--nav-h) + 2.5rem);
+  padding-bottom: 4rem;
+}
+
+/* ─── بردکرامب ─── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+.breadcrumb a { transition: color 0.4s var(--ease); }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb-sep { opacity: 0.5; }
+.breadcrumb > span:last-child { color: var(--text); font-weight: 600; }
+
+/* ─── سربرگ پروژه / عضو ─── */
+.detail-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 6px);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.detail-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px 260px at 85% 0%, rgba(99, 102, 241, 0.14), transparent);
+  pointer-events: none;
+}
+
+.detail-hero-info { position: relative; }
+.detail-hero-info .portfolio-tag { position: static; display: inline-block; width: fit-content; margin-bottom: 0.4rem; }
+
+.detail-title {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 900;
+  margin-block: 0.7rem 0.5rem;
+}
+
+.detail-subtitle { color: var(--muted); font-size: 1.02rem; margin-bottom: 1.6rem; }
+
+/* متادیتا: سال، کارفرما، مدت */
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+.detail-meta-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.6rem 1.1rem;
+  min-width: 110px;
+}
+.detail-meta-label { display: block; font-size: 0.72rem; color: var(--muted); margin-bottom: 0.15rem; }
+.detail-meta-value { font-weight: 700; font-size: 0.92rem; }
+
+.detail-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+
+/* تصویر بزرگ سربرگ پروژه */
+.detail-hero-thumb {
+  position: relative;
+  height: 260px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border);
+}
+.detail-hero-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ─── سربرگ عضو ─── */
+.member-hero { align-items: center; }
+.member-hero .detail-hero-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+.member-hero .portfolio-tag { position: static; display: inline-block; width: fit-content; }
+.member-hero .detail-title { margin-block: 0.4rem; }
+.member-hero .detail-subtitle { margin-bottom: 1.2rem; }
+.member-hero-avatar {
+  display: grid;
+  place-items: center;
+}
+.member-hero-avatar .avatar {
+  width: 170px;
+  height: 170px;
+  font-size: 2.6rem;
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.35);
+}
+.member-hero-avatar img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(99, 102, 241, 0.4);
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.35);
+}
+
+.member-socials { display: flex; gap: 0.7rem; }
+
+/* ─── بخشهای محتوا ─── */
+.detail-section { margin-bottom: 3rem; }
+
+.detail-section-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 1.3rem;
+  padding-inline-start: 0.9rem;
+  position: relative;
+}
+.detail-section-title::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.25em;
+  bottom: 0.25em;
+  width: 4px;
+  border-radius: 4px;
+  background: var(--grad-main);
+}
+
+.detail-longdesc p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  line-height: 2;
+}
+
+.detail-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* ─── گالری تصاویر پروژه ─── */
+.detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.detail-gallery-item {
+  position: relative;
+  height: 200px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.detail-gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+.detail-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+.detail-gallery-item:hover img { transform: scale(1.08); }
+.detail-gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 11, 20, 0.4), transparent 55%);
+  opacity: 1;
+  transition: opacity 0.5s var(--ease);
+  pointer-events: none;
+}
+.detail-gallery-item:hover::after { opacity: 0; }
+
+/* آیتم گرادیانی جایگزین عکس */
+.detail-gallery-item.placeholder {
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.45);
+}
+.detail-gallery-item.placeholder::after { display: none; }
+
+/* ─── لیست قابلیتها ─── */
+.detail-features li {
+  position: relative;
+  padding-inline-start: 2rem;
+  margin-bottom: 0.8rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.detail-features li::before {
+  content: '✓';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.1em;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: #fff;
+  border-radius: 7px;
+  background: var(--grad-main);
+}
+
+/* ─── زبانها و تکنولوژیها (نوار درصد) ─── */
+.detail-langs { display: grid; gap: 1.1rem; }
+
+.detail-lang-item .skill-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.detail-lang-item .skill-name { font-weight: 600; font-size: 0.92rem; }
+.detail-lang-item .skill-percent { font-size: 0.8rem; color: var(--muted); }
+
+.detail-lang-item .skill-bar {
+  clear: both;
+  height: 9px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+.detail-lang-item .skill-bar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: var(--grad-main);
+  transition: width 1.2s var(--ease);
+}
+
+/* ─── ردیف اعضای درگیر پروژه ─── */
+.detail-team-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+.member-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  transition: transform 0.5s var(--ease), border-color 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.member-chip:hover {
+  transform: translateY(-5px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+.member-chip .chip-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--grad-main);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.member-chip .chip-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.member-chip-info { min-width: 0; }
+.member-chip-name { font-weight: 700; font-size: 0.95rem; display: block; }
+.member-chip-role {
+  font-size: 0.75rem;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.35rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.member-chip-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.4s var(--ease);
+}
+.member-chip-link:hover { color: var(--accent); }
+.member-chip-link svg { width: 13px; height: 13px; }
+
+/* ─── ردیف پروژههای مرتبط ─── */
+.detail-projects-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+.mini-project {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.5s var(--ease), border-color 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.mini-project:hover {
+  transform: translateY(-5px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+  
+}
+.mini-project-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;    
+  display: block;
+  position: relative;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.45);
+  isolation: isolate;
+}
+@supports not (aspect-ratio: 16 / 9) {
+  .mini-project-thumb {
+    height: 135px;
+  }
+}
+.mini-project-thumb > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mini-project-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.7s var(--ease);
+}
+.mini-project-body { padding: 0.9rem 1.1rem 1.1rem; }
+.mini-project-title { font-weight: 700; font-size: 0.92rem; margin-bottom: 0.2rem; }
+.mini-project-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mini-project-more {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.mini-project-more svg { width: 13px; height: 13px; }
+
+/* ─── سوابق کاری عضو ─── */
+.member-experiences { display: grid; gap: 1rem; }
+.member-experiences li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  transition: border-color 0.5s var(--ease);
+}
+.member-experiences li:hover { border-color: rgba(34, 211, 238, 0.35); }
+.member-exp-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background: var(--grad-main);
+  margin-top: 0.45em;
+  flex-shrink: 0;
+}
+.member-exp-title { font-weight: 700; font-size: 0.95rem; display: block; }
+.member-exp-place { font-size: 0.82rem; color: var(--muted); display: block; }
+.member-exp-period {
+  margin-inline-start: auto;
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ─── لایتباکس گالری (فقط تصویر) ─── */
+.lightbox-card .lightbox-thumb { height: min(70vh, 520px); }
+.lightbox-card .lightbox-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ─── حالت خطا: پروژه/عضو پیدا نشد ─── */
+.detail-notfound {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.detail-notfound h1 { font-size: 1.8rem; font-weight: 900; margin-bottom: 0.8rem; }
+.detail-notfound p { color: var(--muted); margin-bottom: 1.6rem; }
+
+/* ─── واکنشگرایی صفحات جزئیات ─── */
+@media (max-width: 1024px) {
+  .detail-hero { grid-template-columns: 1fr; }
+  .detail-hero-thumb { height: 220px; order: -1; }
+  .member-hero-avatar { order: -1; }
+  .detail-columns { grid-template-columns: 1fr; gap: 0; }
+  .detail-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .detail-main { padding-top: calc(var(--nav-h) + 1.5rem); }
+  .detail-hero { padding: 1.6rem 1.2rem; gap: 1.6rem; }
+  .detail-gallery { grid-template-columns: 1fr; }
+  .detail-gallery-item { height: 180px; }
+  .detail-meta { gap: 0.6rem; }
+  .detail-meta-item { min-width: 90px; padding: 0.5rem 0.8rem; }
+  .detail-actions .btn { width: 100%; }
+  .member-experiences li { flex-wrap: wrap; }
+  .member-exp-period { margin-inline-start: 0; width: 100%; }
+}
