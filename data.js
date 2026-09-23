@@ -228,7 +228,7 @@ const PROJECTS = [
     year: "۱۴۰۳",
     client: "شرکت کاران",
     duration: "24 ماه",
-    images: ["image/karan1.png", "image/karan2.png", "image/karan3.png"],
+    images: ["image/karan1.jpg", "image/karan2.jpg", "image/karan3.jpg"],
     longDesc: [
       "این سامانه در سطح ملی توسعه یافته و طی دو سال، با بهره‌گیری از جدیدترین استانداردهای برنامه‌نویسی و",
       "ابزارهای مدرن وب (Laravel، Vue.js، RESTful APIs و ابزارهای امنیتی به‌روز) طراحی و پیاده‌سازی شده است.",
