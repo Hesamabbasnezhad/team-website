@@ -588,7 +588,7 @@ const MEMBERS = [
     id: "mobin",
     name: "مبین خروشی",
     initials: "م.خ",
-    photo: "image/mobin_image.jpg",
+    photo: null,
     role: "توسعه‌دهنده فول استک",
     bio: "متخصص توسعه فول استک با تسلط بر لاراول، Vue و Nuxt؛ از طراحی دیتابیس تا زیرساخت و DevOps.",
     skills: [
@@ -904,7 +904,7 @@ const MEMBERS = [
     id: "saba",
     name: "صبا غفاری",
     initials: "ص.غ",
-    photo: "image/saba_image.jpg",
+    photo: null,
     role: "توسعه‌دهنده بک‌اند (Laravel)",
     bio: "علاقه‌مند به کدنویسی تمیز، طراحی APIهای امن و پیاده‌سازی منطق‌های پیچیده کسب‌وکار.",
     skills: ["Laravel", "PHP", "MySQL", "REST API"],
